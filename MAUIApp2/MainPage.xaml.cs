@@ -2,23 +2,22 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
-	public MainPage()
+    string real_text = "Reality";
+    public MainPage()
 	{
 		InitializeComponent();
 	}
-
-	private void OnCounterClicked(object sender, EventArgs e)
+	//set text to another text
+	private void OnImageClicked(object sender, EventArgs e)
 	{
-		count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
+      
+        expectations_pic.Source = "reality.png";
+		expect_text.Text = real_text;
 	}
+	private void OnSecondImageClicked(object sender, EventArgs e)
+	{
+     
+        expectations_pic2.Source = "real_cs.jpg";
+        expect_text2.Text = real_text;
+    }
 }
-

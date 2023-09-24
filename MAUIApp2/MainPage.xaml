@@ -4,38 +4,51 @@
              x:Class="MAUIApp2.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+        <HorizontalStackLayout
+            Spacing="10"
+            Padding="150"
+            HorizontalOptions="Center">
+            <VerticalStackLayout>
+                <ImageButton
+                x:Name="expectations_pic"
+                Source="expectations.png"
+                HeightRequest="400"
+                WidthRequest="400"
+                Aspect="AspectFit"
+                HorizontalOptions="Center"
+                Clicked="OnImageClicked"  />
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
+                <Label
+                x:Name="expect_text"           
+                Text="Expectations"             
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"   
+                TextTransform="Uppercase"
                 HorizontalOptions="Center" />
-
-            <Label
-                Text="Hello, World!"
+               </VerticalStackLayout>
+            
+           
+            <VerticalStackLayout>
+                <ImageButton
+                x:Name="expectations_pic2"
+                Source="expect_cs.jpg"
+                HeightRequest="400"
+                WidthRequest="400"  
+                Aspect="AspectFit"
+                HorizontalOptions="Center" 
+                Clicked="OnSecondImageClicked" />
+                
+                <Label
+                x:Name="expect_text2"
+                Text="Expectations"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
+                TextTransform="Uppercase"            
                 HorizontalOptions="Center" />
+            </VerticalStackLayout>
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
+        </HorizontalStackLayout>
     </ScrollView>
+    
 
 </ContentPage>
